@@ -14,7 +14,7 @@ const Register = () => {
     <div className="container" style={{ marginTop: "10vh" }}>
     <form >
         <h2> Create {email} account</h2>
-        <p>Welcome </p>
+        <p>Welcome To Your To-Do</p>
         <div className="mb-3">
             <label htmlFor="email" className="form-label">Email address :</label>
             <input onChange={e => { setEmail(e.target.value) }} type="email" className="form-control" id="email" />
