@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
+import Modal from './Modal';
 
 const TodoItem = ({ todo, deleteTodo, updateTodo }) => {
     const [isEditing, setIsEditing] = useState(false);
@@ -12,37 +13,26 @@ const TodoItem = ({ todo, deleteTodo, updateTodo }) => {
 
     return (
         <div className={`todo-item ${todo.priority.toLowerCase()}`}>
-            {isEditing ? (
-                <div className="edit-form">
-                    <input
-                        type="text"
-                        value={newDescription}
-                        onChange={(e) => setNewDescription(e.target.value)}
-                    />
-                    <select
-                        value={newPriority}
-                        onChange={(e) => setNewPriority(e.target.value)}
-                    >
-                        <option value="High">High</option>
-                        <option value="Medium">Medium</option>
-                        <option value="Low">Low</option>
-                    </select>
-                    <button className="save-btn" onClick={handleUpdate}>
-                        Save
+            <div className="view-form">
+                <span>{todo.description}</span>
+                <div className="button-group">
+                    <button className='edit-btn' onClick={() => setIsEditing(true)}>
+                        Edit
+                    </button>
+                    <button className='delete-btn' onClick={() => deleteTodo(todo.id)}>
+                        Delete
                     </button>
                 </div>
-            ) : (
-                <div className="view-form">
-                    <span>{todo.description}</span>
-                    <div className="button-group">
-                        <button className='edit-btn' onClick={() => setIsEditing(true)}>
-                            Edit
-                        </button>
-                        <button className='delete-btn' onClick={() => deleteTodo(todo.id)}>
-                            Delete</button>
-                    </div>
-                </div>
-            )}
+            </div>
+            <Modal
+                isOpen={isEditing}
+                onClose={() => setIsEditing(false)}
+                onSave={handleUpdate}
+                description={newDescription}
+                setDescription={setNewDescription}
+                priority={newPriority}
+                setPriority={setNewPriority}
+            />
         </div>
     );
 };

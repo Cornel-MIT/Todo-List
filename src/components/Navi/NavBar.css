@@ -1,0 +1,29 @@
+.nav-bar {
+  background-color: #007bff;
+  padding: 10px;
+}
+
+.nav-bar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav-bar li {
+  display: inline;
+}
+
+.nav-bar a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.nav-bar a:hover {
+  background-color: #32cd32;
+  color: white;
+}

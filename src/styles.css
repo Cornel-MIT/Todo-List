@@ -1,98 +1,92 @@
 body, html {
-    height: 100%;
-    margin: 0;
-    font-family: Arial, sans-serif;
-  }
-  
-  .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  
-  .App {
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .title {
-    text-align: center;
-    margin-bottom: 20px;
-  }
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
 
-  h1 {
-    font-family: 'Courier New', Courier, monospace;
-  }
-  
-  .todo-form {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 20px;
-  }
-  
-  .todo-input, .todo-select, .todo-button {
-    padding: 10px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-  }
-  
-  .todo-input {
-    flex: 1;
-  }
-  
-  .todo-button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .todo-button:hover {
-    background-color: #0056b3;
-  }
-  
-  .todo-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 10px 0;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  .todo-item.high {
-    background-color: #fa747f;
-  }
-  
-  .todo-item.medium {
-    background-color: #c1f841;
-  }
-  
-  .todo-item.low {
-    background-color: #5ec8fa;
-  }
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
 
-  .todo-item {
-    margin-bottom: 10px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+.App {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.todo-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.todo-input, .todo-select, .todo-button {
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.todo-input {
+  flex: 1;
+}
+
+.todo-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.todo-button:hover {
+  background-color: #0056b3;
+}
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.todo-item.high {
+  background-color: #fa747f;
+}
+
+.todo-item.medium {
+  background-color: #c1f841;
+}
+
+.todo-item.low {
+  background-color: #5ec8fa;
 }
 
 .todo-item .edit-form,
 .todo-item .view-form {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .todo-item .view-form {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
 }
 
 .todo-item .view-form span {
@@ -101,28 +95,29 @@ body, html {
 
 .todo-item .button-group {
   display: flex;
+  gap: 10px;
 }
 
 .todo-item .button-group button {
   margin-left: 10px;
 }
 
-
 .save-btn {
-    background-color: #4caf50;
-    color: white;
-    border: none;
-    padding: 8px 12px;
-    cursor: pointer;
+  background-color: #4caf50;
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
 }
 
 .edit-btn {
-    background-color: #f8da51;
-    color: #000000;
-    border: none;
-    padding: 8px 12px;
-    cursor: pointer;
-    border-radius: 8px;
+  background-color: #f8da51;
+  color: #000000;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 8px;
+  font-weight: bolder;
 }
 
 .delete-btn {
@@ -132,16 +127,67 @@ body, html {
   padding: 8px 10px;
   cursor: pointer;
   border-radius: 8px;
+  font-weight: bolder;
 }
 
 button {
-    background-color: #f44336;
-    color: white;
-    border: none;
-    padding: 8px 10px;
-    cursor: pointer;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 8px 10px;
+  cursor: pointer;
 }
 
 button:hover {
-    opacity: 0.8;
+  opacity: 0.8;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-form {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: center;
+}
+
+.login-form h2 {
+  margin-bottom: 20px;
+}
+
+.login-form div {
+  margin-bottom: 15px;
+}
+
+.login-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.login-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.login-form button:hover {
+  background-color: #0056b3;
 }
