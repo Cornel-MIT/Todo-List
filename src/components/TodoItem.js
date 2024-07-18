@@ -13,7 +13,7 @@ const TodoItem = ({ todo, deleteTodo, updateTodo }) => {
     return (
         <div className={`todo-item ${todo.priority.toLowerCase()}`}>
             {isEditing ? (
-                <>
+                <div className="edit-form">
                     <input
                         type="text"
                         value={newDescription}
@@ -27,14 +27,21 @@ const TodoItem = ({ todo, deleteTodo, updateTodo }) => {
                         <option value="Medium">Medium</option>
                         <option value="Low">Low</option>
                     </select>
-                    <button onClick={handleUpdate}>Save</button>
-                </>
+                    <button className="save-btn" onClick={handleUpdate}>
+                        Save
+                    </button>
+                </div>
             ) : (
-                <>
+                <div className="view-form">
                     <span>{todo.description}</span>
-                    <button onClick={() => setIsEditing(true)}>Edit</button>
-                    <button onClick={() => deleteTodo(todo.id)}>Delete</button>
-                </>
+                    <div className="button-group">
+                        <button className='edit-btn' onClick={() => setIsEditing(true)}>
+                            Edit
+                        </button>
+                        <button className='delete-btn' onClick={() => deleteTodo(todo.id)}>
+                            Delete</button>
+                    </div>
+                </div>
             )}
         </div>
     );

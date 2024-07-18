@@ -6,7 +6,7 @@ const Todo = () => {
     return (
         <div className="container">
             <div className="App">
-                <h1 className="title">Your To-do List</h1>
+                <h1 className="title">Welcome to your Todo-List</h1>
                 <TodoList />
             </div>
         </div>

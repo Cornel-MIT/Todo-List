@@ -1,7 +1,8 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import 'react-toastify/dist/ReactToastify.css';
 import Login from './Login';
-import Register from './Register';
+import Register from './components/Account/Register';
 import Todo from './components/Todo';
 
 const App = () => {

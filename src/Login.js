@@ -14,7 +14,6 @@ export default function Login() {
 <div className='containe' style={{ marginTop: '10vh' }}>
             <form >
                 <h2>Login to your account</h2>
-                <p>Welcome back!</p>
                 <div>
                     <label htmlFor='email' >Email address :</label>
                     <input onChange={e => { setEmail(e.target.value) }} type='email' id='email' />
