@@ -74,7 +74,7 @@ const TodoList = () => {
             <TodoForm addTodo={addTodo} />
             <input
                 type="text"
-                placeholder="Search todos"
+                placeholder="Search For An Item"
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
             />

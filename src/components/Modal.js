@@ -7,7 +7,7 @@ const Modal = ({ isOpen, onClose, onSave, description, setDescription, priority,
     return (
         <div className="modal-overlay">
             <div className="modal-content">
-                <h2>Edit Your Item</h2>
+                <h3 className='popup-title'>Edit Your Item</h3>
                 <input
                     type="text"
                     value={description}

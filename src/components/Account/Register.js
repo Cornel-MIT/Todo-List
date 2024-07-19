@@ -34,8 +34,8 @@ const Register = () => {
 
     return (
         <div className="container" style={{ marginTop: '10vh' }}>
-            <form onSubmit={handleRegister}>
-                <h2>Create an account</h2>
+            <form className='form-register' onSubmit={handleRegister}>
+                <h3 className='register-title'>Create an account</h3>
                 <div className="mb-3">
                     <label htmlFor="email" className="form-label">
                         Email address:
@@ -60,14 +60,17 @@ const Register = () => {
                         value={password}
                     />
                 </div>
-                <button type="submit" className="btn btn-primary">
+                <button 
+                type="submit" 
+                className="btn btn-primary"
+                style={{ marginLeft: '1vh'}}>
                     SIGN UP
                 </button>
-                <p style={{ marginTop: '2vh' }}>
+                <p style={{ marginTop: '2vh'}}>
                     Have an account? <Link to={'/login'}>Login</Link>
                 </p>
             </form>
-            <ToastContainer /> {/* Ensure ReactToastify.css is imported correctly */}
+            <ToastContainer />
         </div>
     );
 };
