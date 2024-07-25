@@ -3,68 +3,64 @@ import TodoForm from './TodoForm';
 import TodoItem from './TodoItem';
 
 const TodoList = () => {
-    // State to store todos
     const [todos, setTodos] = useState([]);
-    // State for search input
     const [search, setSearch] = useState('');
 
-    // Fetch todos from the server when the component mounts
     useEffect(() => {
-        fetch('http://localhost:5000/todos')
+        fetch('http://localhost:3002/todos')
             .then(response => response.json())
             .then(data => setTodos(data))
             .catch(error => console.error('Error fetching todos:', error));
     }, []);
 
-    // Add a new todo
     const addTodo = (description, priority) => {
         const newTodo = {
-            id: Date.now(),
             description,
             priority,
         };
-        setTodos([...todos, newTodo]);
-
-        // Save new todo to the server
-        fetch('http://localhost:5000/todos', {
+        fetch('http://localhost:3002/todos', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify(newTodo),
-        }).catch(error => console.error('Error adding todo:', error));
+        })
+        .then(response => response.json())
+        .then(data => setTodos([...todos, data]))
+        .catch(error => console.error('Error adding todo:', error));
     };
 
-    // Delete a todo
     const deleteTodo = (id) => {
-        setTodos(todos.filter(todo => todo.id !== id));
-
-        // Delete todo from the server
-        fetch(`http://localhost:5000/todos/${id}`, {
+        fetch(`http://localhost:3002/todos/${id}`, {
             method: 'DELETE',
-        }).catch(error => console.error('Error deleting todo:', error));
+        })
+        .then(() => setTodos(todos.filter(todo => todo.id !== id)))
+        .catch(error => console.error('Error deleting todo:', error));
     };
 
-    // Update an existing todo
     const updateTodo = (id, description, priority) => {
-        const updatedTodos = todos.map(todo =>
-            todo.id === id ? { ...todo, description, priority } : todo
-        );
-        setTodos(updatedTodos);
-
-        // Find the updated todo
-        const updatedTodo = updatedTodos.find(todo => todo.id === id);
-        // Save updated todo to the server
-        fetch(`http://localhost:5000/todos/${id}`, {
+        const updatedTodo = {
+            id,
+            description,
+            priority,
+        };
+        fetch(`http://localhost:3002/todos/${id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify(updatedTodo),
-        }).catch(error => console.error('Error updating todo:', error));
+        })
+        .then(response => response.json())
+        .then(data => {
+            const updatedTodos = todos.map(todo =>
+                todo.id === id ? data : todo
+            );
+            setTodos(updatedTodos);
+        })
+        .catch(error => console.error('Error updating todo:', error));
     };
 
-    // Filter todos based on search input
     const filteredTodos = todos.filter(todo =>
         todo.description.toLowerCase().includes(search.toLowerCase())
     );

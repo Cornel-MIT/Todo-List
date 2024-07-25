@@ -16,6 +16,9 @@ const TodoItem = ({ todo, deleteTodo, updateTodo }) => {
             <div className="view-form">
                 <span>{todo.description}</span>
                 <div className="button-group">
+                    <button className='complete-btn' onClick={() => deleteTodo(todo.id)}>
+                        Complete
+                    </button>
                     <button className='edit-btn' onClick={() => setIsEditing(true)}>
                         Edit
                     </button>

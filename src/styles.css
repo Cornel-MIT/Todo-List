@@ -118,6 +118,16 @@ h1 {
   cursor: pointer;
 }
 
+.complete-btn {
+  background-color: #5bf72c;
+  color: #000000;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 8px;
+  font-weight: bolder;
+}
+
 .edit-btn {
   background-color: #f8da51;
   color: #000000;

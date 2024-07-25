@@ -11,23 +11,23 @@ const Register = () => {
 
     const handleRegister = (e) => {
         e.preventDefault();
-        // Simulate checking if email already exists (replace with your actual check)
+
         const isEmailExists = checkEmailExists(email);
         if (isEmailExists) {
             toast.error("Sorry, Buddy! You can't use that account.");
             return;
         }
 
-        // Save user email to local storage or send to server (for real application)
+
         localStorage.setItem('userEmail', email);
         setIsLoggedIn(true);
-        // Navigate to a different route (e.g., home page) after successful registration
-        navigate('/'); // Replace with your desired route
+
+        navigate('/'); 
     };
 
-    // Simulated function to check if email exists (replace with your actual logic)
+
     const checkEmailExists = (email) => {
-        // Example: Check if email already exists in local storage
+
         const existingEmail = localStorage.getItem('userEmail');
         return existingEmail === email;
     };
