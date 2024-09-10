@@ -10,6 +10,7 @@ body, html {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  margin-top: 100px;
 }
 
 .App {
@@ -108,6 +109,10 @@ h1 {
 
 .todo-item .button-group button {
   margin-left: 10px;
+}
+
+.items-card {
+  
 }
 
 .save-btn {
