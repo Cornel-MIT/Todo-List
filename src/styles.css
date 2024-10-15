@@ -26,6 +26,11 @@ body, html {
   font-weight: bolder;
 }
 
+.items-comp {
+  display: grid;
+  display: inherit;
+}
+
 h1 {
   font-family: 'Courier New', Courier, monospace;
 }

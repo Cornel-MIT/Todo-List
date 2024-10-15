@@ -1,70 +1,88 @@
-# Getting Started with Create React App
+# To-Do List Application
+This is a **To-Do List App** built using **React.js** and **CSS**, with **LocalStorage** and **SQLight** for persisting task data across browser sessions and storing the lists. The app allows users to manage their daily tasks with full CRUD functionality, categorize tasks by priority, and mark tasks as completed.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Features
 
-## Available Scripts
+### User Features:
+1. **Home Page (To-Do List):**
+   - Displays a list of tasks, each showing:
+     - Task title.
+     - Description.
+     - Priority rank (color-coded: blue for low, yellow for medium, red for high).
+     - Action buttons to edit, delete, or mark the task as completed.
 
-In the project directory, you can run:
+2. **Add Task Form:**
+   - Inputs for:
+     - Task title.
+     - Task description.
+     - Priority rank selection (Low, Medium, High).
+   - Button to add the task to the to-do list.
+   - Validation for required fields.
 
-### `npm start`
+3. **Edit Task Page:**
+   - Pre-filled form with the selected task's details.
+   - Allows the user to update:
+     - Task title.
+     - Description.
+     - Priority rank (Low, Medium, High).
+   - Button to save changes.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+4. **Completed Tasks Page:**
+   - Displays a Complete button to use if tasks have been completed on the to-do list.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+5. **Delete Task Confirmation:**
+   - Button to confirm deletion.
+   
+6. **Task Priority Color Classification:**
+   - Low priority tasks are displayed with a **blue** background.
+   - Medium priority tasks are displayed with a **yellow** background.
+   - High priority tasks are displayed with a **red** background.
 
-### `npm test`
+7. **LocalStorage Integration:**
+   - All tasks (to-do and completed) are stored in the browser's LocalStorage.
+   - Tasks persist even after refreshing the browser or reopening the app.
+   - Storing the list of items in SQLite.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+### Navigation Bar:
+- **Links:**
+  - To-Do List (Displays the list of tasks to complete).
+  - Edit Task (Form to edit a existing task).
+  - Delete (Clears a task you do not wish to do anymore).
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Technology Stack
+- **Frontend:** React.js
+- **Styling:** CSS
+- **Data Persistence:** LocalStorage (for storing tasks)
+- **Data Storage:** SQLite
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## Images
+![To-Do List Screen](src/images/Todo.png)
+![Edit Task Form](src/images/Todo4.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Installation
+To run this project locally, follow these steps:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Cornel-MIT/Todo-List.git
+   ```
+2. Install the dependencies:
+   ```bash
+   cd react-js---TodoList
+   npm install
+   ```
+3. Start the React development server:
+   ```bash
+   npm start
+   ```
+4. Open the app in your browser:
+   ```
+   http://localhost:3000
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+5. The app server is running on:
+   ```
+   http://localhost:3002   
