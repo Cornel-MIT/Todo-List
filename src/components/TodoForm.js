@@ -14,6 +14,7 @@ const TodoForm = ({ addTodo }) => {
     };
 
     return (
+        <div className='items-card'>
         <form onSubmit={handleSubmit} className="todo-form">
             <input
                 type="text"
@@ -36,6 +37,8 @@ const TodoForm = ({ addTodo }) => {
             </select>
             <button type="submit" className="todo-button">Add Todo</button>
         </form>
+        </div>
+
     );
 };
 
