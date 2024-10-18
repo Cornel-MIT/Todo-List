@@ -89,6 +89,10 @@ To run this project locally, follow these steps:
    ```
    http://localhost:3002 
 
-6. Go into src/db to run the following :
+6. Go into src/db to run the following:
    ```
    [ json-server --watch db.json --port 5000 ]
+
+7. Domain Name:   
+   ```
+   https://todo-list-sooty-gamma-59.vercel.app/
