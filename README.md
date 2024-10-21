@@ -90,7 +90,7 @@ To run this project locally, follow these steps:
 
 6. Go into src/db to run the following:
    ```
-   [ json-server --watch db.json --port 5000 ]
+   node server.js
 
 7. Domain Name:   
    ```
