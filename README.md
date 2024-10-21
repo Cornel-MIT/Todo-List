@@ -30,7 +30,6 @@ This is a **To-Do List App** built using **React.js** and **CSS**, with **LocalS
 4. **Completed Tasks Page:**
    - Displays a Complete button to use if tasks have been completed on the to-do list.
 
-
 5. **Delete Task Confirmation:**
    - Button to confirm deletion.
    
@@ -87,4 +86,12 @@ To run this project locally, follow these steps:
 
 5. The app server is running on:
    ```
-   http://localhost:3002   
+   http://localhost:3002 
+
+6. Go into src/db to run the following:
+   ```
+   [ json-server --watch db.json --port 5000 ]
+
+7. Domain Name:   
+   ```
+   https://todo-list-sooty-gamma-59.vercel.app/
