@@ -9,7 +9,7 @@ const Todo = () => {
         <div>
             <NavBar />
             <div className="container">
-                <div className="App">
+                <div className="Todo-Form">
                     <h1 className="title">Your To-do List</h1>
                     <TodoList />
                 </div>

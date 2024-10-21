@@ -66,7 +66,7 @@ const Register = () => {
                 style={{ marginLeft: '1vh'}}>
                     SIGN UP
                 </button>
-                <p style={{ marginTop: '2vh'}}>
+                <p className='login-statement' style={{ marginTop: '2vh'}}>
                     Have an account? <Link to={'/login'}>Login</Link>
                 </p>
             </form>

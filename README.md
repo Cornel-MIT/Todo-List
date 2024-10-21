@@ -30,7 +30,7 @@ This is a **To-Do List App** built using **React.js** and **CSS**, with **LocalS
 4. **Completed Tasks Page:**
    - Displays a Complete button to use if tasks have been completed on the to-do list.
 
-<<<<<<< HEAD
+
 5. **Delete Task Confirmation:**
    - Button to confirm deletion.
    
@@ -38,12 +38,7 @@ This is a **To-Do List App** built using **React.js** and **CSS**, with **LocalS
    - Low priority tasks are displayed with a **blue** background.
    - Medium priority tasks are displayed with a **yellow** background.
    - High priority tasks are displayed with a **red** background.
-=======
-Go into src/db to run the following : [ json-server --watch db.json --port 5000 ]
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
->>>>>>> 6a950f7e2bd866e2924ee269bf9174fd9e7c7cf7
 
 7. **LocalStorage Integration:**
    - All tasks (to-do and completed) are stored in the browser's LocalStorage.
